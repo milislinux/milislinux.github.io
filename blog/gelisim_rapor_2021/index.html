@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Milis Linux Gelişim Raporu 2019-2021 ve 2.1 Sürümü - Milis Linux</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body id="gelisim_rapor_2021">
+
+<nav>
+<section>
+    <span class="home">
+        <a href="/">Ana Sayfa</a>
+    </span>
+    <span class="links">
+        <a href="/indir/">İndir</a>
+        <a href="/belge/">Belge</a>
+        <a href="https://mls.akdeniz.edu.tr/git/milislinux/milis21">Kod</a>
+        <a href="https://mls.akdeniz.edu.tr/forum/forum">Forum</a>
+        <a href="/blog/">Blog</a>
+        <!-- <a href="/paketler21/">Paketler</a> -->
+        <a href="/hakkinda/">Hakkında</a>
+        <a href="/iletisim/">İletişim</a>
+    </span>
+</section>
+</nav>
+
+<main>
+<article>
+<h1><a href="/blog/gelisim_rapor_2021/">Milis Linux Gelişim Raporu 2019-2021 ve 2.1 Sürümü</a></h1>
+<!-- <p class="meta">Published on 2021-08-04 by <b>Admin</b></p> -->
+<p>2021 yılı bitimiyle beş yıllık gelişim sürecini tamamlayacak olan Milis Linux Projesinin 2021-Ağustos ayına kadar olan gelişim sürecini özetlersek;</p>
+
+<p>2019 yılı itibariyle Akdeniz Üniversitesi bünyesinde Bilimsel Araştırma Pojesi olarak başlattığımız 2.0 sürüm çalışmaları, 
+2020 yılında bir yıllık proje olarak tamamlanarak <a href="/doc/milis_linux_bap_sonuc_rapor.pdf">proje sonuç raporunda</a> da ayrıntılı olarak anlatılmıştır. 
+Proje kapsamında taahhüt edilen geliştirmeler yerine getirildiği gibi Milis 2.0 Beta sürüm seviyesinde kullanıma sunulmuştur.
+Ayrıca proje çıktısı olarak <em>"Linux Tabanlı Hafif ve Açık Kaynak Kodlu Büyük Veri Dağıtımı Gerçeklemesi"</em> 
+konulu yüksek lisans tez çalışması yapıldığı gibi Milis Linux ilişkili <a href="/belge">akademik makaleler</a> de yayınlanmıştır.
+Bütün bu süreçte yapılanlar projenin çok yönlü bir şekilde gelişimine katkı sağlamıştır. 
+Bilhassa projenin üniversite bünyesinde tazelenmesi, akademik yönden ele alınmasını sağlayarak farklı geliştirmeler yapılması gerekliliğini doğurmuştur.</p>
+
+<p>Dolayısıyla Milis Linux, <em>"Milli İşletim Sistemi"</em> ideali doğrultusunda projenin özgün niteliğinin artırılması ve
+Linux dünyasındaki gelişmeleri de dikkate alarak 2021 başlarında 2.1 sürümü için çalışmalara başlamıştır.
+2021 yılı Ağustos ayına kadar Alfa imaj çalışmaları yapılarak Beta sürüm seviyesine gelinmiştir.
+Milis Linux 2.0 Beta seviyesinde kararlı sistem ayarında her ne kadar 2 senedir kullanılsa da artık eskisi gibi aktif geliştirilmeyecektir.
+Gönüllü ekibimiz ile tüm enerjimizi 2.1 sürümü ile daha özgün ve kararlı bir sistem için harcayacağız.</p>
+
+<p>2.1 Sürümü ile gelen temel yenilikleri gerekçeleriyle beraber sayarsak;</p>
+
+<ul>
+<li>Başlatıcı (init) sistemi olarak Militer adlı kendi init sistemimize geçildi. 
+1.0 ve 2.0 da kullanılan Sysvinit init sisteminin yönetiminin ve bakımının güç olması böyle bir değişikliği gerekli kılmıştır.
+Militer ile sistem, sadece gerekli servisle açılıp yönetimi tek bir ayar dosyası üzerinden yapılmaktadır.
+Ayrıntılı bilgi için <a href="https://mls.akdeniz.edu.tr/git/milislinux/milis21/src/branch/master/belge/servis.md">servis yönetim belgesi</a> incelenebilir.</li>
+<li>Öntanımlı grafik sunucusu olarak X yerine sadece Wayland kullanıldı. 
+X sunucusu ve bileşenlerinin eskisi gibi bakım almaması ve Linux grafik yığını için karmaşık bir mimariye sahip olması bu değişikliği gerektirmiştir.
+Wayland üzerinde şu an için <a href="https://github.com/WayfireWM/wayfire">Wayfire</a> pencere yöneticisi taban alınarak kendi masaüstü kompozisyonumuz kullanılmaktadır.</li>
+<li>Sistemin kolay ayarlanabilir olmasını sağlamak için dinamik arayüzlere sahip Ayguci adlı modüler ayar uygulaması eklenmiştir.
+Bu uygulama ile kolayca sisteme ilişkin ayarlar yapılacağı gibi sistem hakkında ayrıntılı bilgilere de erişilebilecektir.
+Ayrıntılı bilgi için <a href="https://mls.akdeniz.edu.tr/git/milislinux/milis21/src/branch/master/belge/ayguci.md">Ayguci belgesi</a> incelenebilir.</li>
+<li>C ve C++ ın yanısıra farklı programlama dilleriyle (Rust, Go, Zig) yazılmış sistem uygulamaları kullanıldı. 
+Bu yaklaşım ile sistem için sorunsuz çalışan uygulamalar sisteme dahil edilmiştir. </li>
+</ul>
+
+<p>Bu değişikliklerin yanısıra MPS (Milis Paket Yöneticisi) de geliştirilmeye devam edilmiş ve farklı özellikler eklenmiştir.
+Ek olarak 2.1 sürümlerinde kendi bünyemizde geliştirdiğimiz arayüz uygulamaları da yer alacaktır.</p>
+
+<p>Sağolsun gönüllü ekibimiz de dinamik yapıda sinerjisini koruyarak daimi olarak katkı sunmaktadır.
+İlerleyen aylarda Milis Linux 2.1 sürümünün Beta sürümleri yayınlanarak kararlı imaj çalışmalarına devam edilecektir.</p>
+
+<p>M.Numan İNCE (Milis Linux Proje Kurucu ve Ana-Geliştiricisi)</p>
+
+<!--- 2021-08-04 -->
+
+</article>
+
+</main>
+
+<footer>
+<section>
+
+<p>
+    <p>&copy; Milis Linux 2021 </p>
+    <p>Bu site Akdeniz Üniversitesi sunucularında barındırılmaktadır. Sitede yer alan içerik kaynak göstermek şartıyla kullanılabilir.
+	Linux® Linus Torvalds'ın tescilli bir markasıdır. (<a href="http://www.linuxfoundation.org/programs/legal/trademark/attribution">info</a>)
+	</p>
+	<p><a href="/en/">English Site</a></p>
+</p>
+</section>
+</footer>
+
+</body>
+</html>

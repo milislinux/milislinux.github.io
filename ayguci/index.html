@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }} - Milis Linux</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body id="ayguci">
+
+<nav>
+<section>
+    <span class="home">
+        <a href="/">Ana Sayfa</a>
+    </span>
+    <span class="links">
+        <a href="/indir/">İndir</a>
+        <a href="/belge/">Belge</a>
+        <a href="https://mls.akdeniz.edu.tr/git/milislinux/milis21">Kod</a>
+        <a href="https://mls.akdeniz.edu.tr/forum/forum">Forum</a>
+        <a href="/blog/">Blog</a>
+        <!-- <a href="/paketler21/">Paketler</a> -->
+        <a href="/hakkinda/">Hakkında</a>
+        <a href="/iletisim/">İletişim</a>
+    </span>
+</section>
+</nav>
+
+<main>
+<h3>Ayguci - Modüler Ayar Sistemi</h3>
+
+<p>Milis Linux'un amaçlarından biri de sistem ayarlarını kullanıcı için kolaylaştırmaktır. 
+Bunun için ilk sürümlerde Komutan adlı web tabanlı uygulama geliştirilmeye çalışılmıştır.
+Fakat zamanla yapılan arge çalışmaları sonucu kod altyapısı daha esnek bir çalışma modeline çevrilerek C ve Lua ile yeniden yazılmıştır.
+Bu yeni uygulama, eski Türk yönetim sisteminde kağandan sonra en yetkili kişi anlamına gelen Ayguçi olarak adlandırılmıştır.</p>
+
+<p>Ayguci uygulamasının amacı, sisteme dönük tüm ayarların modüler bir şekilde kullanıcı tarafından yapılabilmesini sağlamaktır.
+Bu ayarlar sistem, ağ, ekran, ses, zaman vb. gibi gruplar altında yer alabilir.
+Her bir ayarlama Ayguci'de işlev olarak bir grup altında yer alır. 
+Dolayısıyla kullanıcı bir ayara önce grubunu sonra işlevini seçerek erişir.
+Bu erişim sonucu ilgili ayara ilişkin durum verisi gösterilir.
+Bu veri gerekirse kullanıcı tarafından düzenlenip güncellenebilir.
+Örnek vermek gerekirse; saati ayarlama için datetime grubu altından manual işlevine erişmek gerekmektedir.
+İlk erişimde kullanıcıya güncel saat ve tarih bilgisi gösterilecektir.
+Kullanıcı ilgili sahayı düzenleyerek onayladığı zaman, saat/tarih ayarlama işlemi tamamlanmış olacaktır.
+Kullanıcıya ayar arayüzü; komut satırı, konsol arayüzü ve grafik arayüzü olmak üzere üç farklı şekilde sunulmaktadır.</p>
+
+<p>Ayguci'nin çalışma yapısı, IPC haberleşme mekanizması kullanan sunucu/istemci modelindedir.
+Ayguci sunucu betiği, servis olarak arkaplanda ilgili işlev isteklerini dinlerken
+istemci uygulamalar farklı arayüzler üzerinden sunucu ile haberleşmektedir. 
+Ayguci'de her grup moduller altında birer dizin olarak yer alırken işlevler de grup dizini altında
+Lua betikleri olarak yer almaktadır. 
+Her işlev içinde kullanıcıya gösterilecek çıktı(get) ve alınacak girdi(set) tanımlanmaktadır.
+Kullanıcının işleve erişiminde Ayguci dinamik bir şekilde konsol veya grafiksel arayüz üretmektedir.</p>
+
+<p>Aşağıda kurulum ve kullanımı bilgileri yer almaktadır.</p>
+
+<h4>İlk Kurulum ve Güncelleme:</h4>
+
+<pre><code>    ayguci update
+</code></pre>
+
+<h4>Konsol Arayüz Erişimi:</h4>
+
+<pre><code>    ayguci tui
+</code></pre>
+
+<h4>Grafik Arayüzü:</h4>
+
+<pre><code>    ayguci gui  #veya direk masaüstü menüden ayguci uygulaması açılır.
+</code></pre>
+
+</main>
+
+<footer>
+<section>
+
+<p>
+    <p>&copy; Milis Linux 2021 </p>
+    <p>Bu site Akdeniz Üniversitesi sunucularında barındırılmaktadır. Sitede yer alan içerik kaynak göstermek şartıyla kullanılabilir.
+	Linux® Linus Torvalds'ın tescilli bir markasıdır. (<a href="http://www.linuxfoundation.org/programs/legal/trademark/attribution">info</a>)
+	</p>
+	<p><a href="/en/">English Site</a></p>
+</p>
+</section>
+</footer>
+
+</body>
+</html>
