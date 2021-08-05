@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kurulum - Milis Linux</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body id="kurulum">
+
+<nav>
+<section>
+    <span class="home">
+        <a href="/">Ana Sayfa</a>
+    </span>
+    <span class="links">
+        <a href="/indir/">İndir</a>
+        <a href="/belge/">Belge</a>
+        <a href="https://mls.akdeniz.edu.tr/git/milislinux/milis21">Kod</a>
+        <a href="https://mls.akdeniz.edu.tr/forum/forum">Forum</a>
+        <a href="/blog/">Blog</a>
+        <!-- <a href="/paketler21/">Paketler</a> -->
+        <a href="/hakkinda/">Hakkında</a>
+        <a href="/iletisim/">İletişim</a>
+    </span>
+</section>
+</nav>
+
+<main>
+<h3>Kurulum</h3>
+
+<p>Milis Linux'ta çalışan iso dosyasından, sistemi direkt olarak hedef disk bölümüne 
+kurabilirsiniz. Bu aşamada iso dosyası üzerinde yaptığınız ayarlar da olduğu gibi
+yeni sisteme aktarılacaktır.
+Kurulum öncesi</p>
+
+<h4>İmza doğrulaması</h4>
+
+<p>Herhangi bir dosya bozukluğuna ve indirme hatasına karşın, yüklemeye başlamadan önce iso
+dosyasının imzasını doğrulamanız önerilir.
+Bunu yapmak için indirdiğiniz sha256sum dosyasını iso dosyanız ile aynı klasöre atın ve alttaki 
+komutu indiriğiniz imza dosyası ile çalıştırın:</p>
+
+<p><code>
+    sha256sum -c milis-2.1-desktop-B08.01.iso.sha256sum
+</code></p>
+
+<h4>Sistemin canlı imaj ile başlatılması</h4>
+
+<p>İndirdiğiniz iso dosyasını bir USB belleğe veya CD sürücüye yazdırın ve bilgisayarınızı bu
+sürücü ile başlatın. Canlı imaj başladıktan sonra Milis Linux'u üç yolla bilgisayarınıza kurabilirsiniz:</p>
+
+<p>A- Konsol Arayüzlü Kurulum</p>
+
+<p>B- Grafiksel Arayüzlü Kurulum</p>
+
+<p>C- Klasik Kurulum</p>
+
+<h3>A- Konsol Arayüzlü Kurulum</h3>
+
+<p>Bir uçbirim(terminal) uygulaması açıp <strong>milis-kur</strong> komutu vererek kurulum uygulamasını açılır.
+Milis-kur uygulaması konsol tabanlı arayüze sahip bir kurulum uygulamasıdır. 
+Aşağıda örnek bir kurulum adım adım anlatılmışır. 
+Kurulum uygulaması resimde görülen adımların uygulanmasıyla gerçekleşir. 
+Bütün adımlar için gerekli ayarlar yapıldıktan sonra <strong>Yükle</strong> adımı ile kurulum başlatılır.</p>
+
+<p><img src="/image/kurulum/0menu.png" alt="drawing" /> </p>
+
+<p>1- <strong>Klavye</strong></p>
+
+<p>Klavye seçimi yapılır. 
+Masaüstü kurulumu için klavye yerleşim(Layout), minimal kurulumda Keymap değerleri çıkacaktır.</p>
+
+<p><img src="/image/kurulum/1klavye.png" alt="drawing"/></p>
+
+<p>2- <strong>Bilgisayar Adı</strong></p>
+
+<p>Bilgisayar adı girilir.</p>
+
+<p><img src="/image/kurulum/2bilgisayar.png" alt="drawing"/></p>
+
+<p>3- <strong>Bölgesel Ayarlar</strong></p>
+
+<p>İlgili bölgesel ayarlar seçilir. Sistemin dilini belirleyecektir.</p>
+
+<p><img src="/image/kurulum/3bolgesel.png" alt="drawing"/></p>
+
+<p>4- <strong>Zaman Dilimi</strong></p>
+
+<p>İlgili zaman dilimi seçilir, Türkiye için en alttaki Turkey değeri seçilecektir.</p>
+
+<p><img src="/image/kurulum/4zaman.png" alt="drawing"/></p>
+
+<p>5- <strong>Root Hesabı</strong></p>
+
+<p>Root hesabı için parola ataması yapılır.</p>
+
+<p><img src="/image/kurulum/5root.png" alt="drawing"/></p>
+
+<p>6- <strong>Kullanıcı Hesabı</strong></p>
+
+<p>Kullanıcı hesabı ayarları yapılır.
+Kullanıcı giriş adı sisteme girerken kullanacağınız isimdir.
+<strong>Türkçe karakter kullanılamaz</strong>.</p>
+
+<p><img src="/image/kurulum/6kull1.png" alt="drawing"/></p>
+
+<p>Kullanıcı gerçek adı, uzun ismi veya ad-soyad olarak düşünülebilir.
+Türkçe karakter kullanılabilir.</p>
+
+<p><img src="/image/kurulum/6kull2.png" alt="drawing"/>
+Kullanıcı için de bir parola ataması yapılır.</p>
+
+<p><img src="/image/kurulum/6kull3.png" alt="drawing"/></p>
+
+<p>Kullanıcı için eklencek grup varsa seçilir.
+Varsayılan olarak kullanıcı için gerekli gruplarla kurulacaktır.
+Tamam ile geçilir.</p>
+
+<p><img src="/image/kurulum/6kull4.png" alt="drawing"/></p>
+
+<p>7- <strong>Önyükleyici</strong> (Bootloader)</p>
+
+<p>Önyükleyicinin kurulacağı disk seçilir. </p>
+
+<p><img src="/image/kurulum/7onyukleyici.png" alt="drawing"/></p>
+
+<p>Varsayılan olarak evet seçilir.</p>
+
+<p><img src="/image/kurulum/7onyukleyici2.png" alt="drawing"/></p>
+
+<p>8- <strong>Disk Bölümleme</strong></p>
+
+<p>Sistemin kurulacağı disk bölümünün hazırlandığı adımdır.
+Sistem hangi diske kurulacaksa o disk için cfdisk uygulaması çalıştırılır.
+Cfdisk kullanımı için uygulamanın kullanım belgesinden yararlanılabilir.
+Örnek kurulumda sdb seçilmiştir.</p>
+
+<p><img src="/image/kurulum/8bolumleme1.png" alt="drawing"/></p>
+
+<p>Sistemin kurulumu için en az bir ext4 biçiminde diske ihtiyaç vardır.
+Ayrıca EFI kurulumu da yapılacaksa en az 100MB lık FAT32 biçiminde bir disk bölümü daha ayarlanmalıdır.</p>
+
+<p><img src="/image/kurulum/8bolumleme2.png" alt="drawing"/></p>
+
+<p><img src="/image/kurulum/8bolumleme3.png" alt="drawing"/></p>
+
+<p>9- <strong>Dosya Sistemi</strong></p>
+
+<p>Sistemin kurulacağı disk bölümünün atanması adımıdır.
+Örnek kurulumda sdb1 disk bölümüne kurulum yapılacaktır.
+Varsayılan olarak <strong>/</strong> altına bağlanılmalıdır.
+EFI bölümünüz yoksa oluşturunuz varsa sadece bağlama yapınız.
+EFI bölümü için <strong>/boot/efi</strong> altına bağlama yapılmalıdır.
+Sonrasında biçimlendirmesine onay verilip çıkış(bitti) yapılabilir.</p>
+
+<p><img src="/image/kurulum/9dosyasistemi1.png" alt="drawing"/></p>
+
+<p><img src="/image/kurulum/9dosyasistemi2.png" alt="drawing"/></p>
+
+<p><img src="/image/kurulum/9dosyasistemi3.png" alt="drawing"/></p>
+
+<p><img src="/image/kurulum/9dosyasistemi4.png" alt="drawing"/></p>
+
+<p>10- <strong>Sistemin Yüklenmesi</strong></p>
+
+<p>Kuruluma geçmeden önce adımlarda yapılan ayarları kontrol edilebilir.</p>
+
+<p><img src="/image/kurulum/10ayarlar.png" alt="drawing"/></p>
+
+<p>Ayarlar kontrol edildikten sonra yükle adımı seçilerek sistemin yüklenmesi başlatılır.</p>
+
+<p><img src="/image/kurulum/10yukle1.png" alt="drawing"/>
+<img src="/image/kurulum/10yukle2.png" alt="drawing"/>
+<img src="/image/kurulum/10yukle3.png" alt="drawing"/>
+<img src="/image/kurulum/10yukle4.png" alt="drawing"/></p>
+
+<p>Başarılı yükleme mesajıyla kurulum uygulamasından çıkılabilir 
+veya sistem yeniden başlatılabilir.</p>
+
+<p><img src="/image/kurulum/10yukle5.png" alt="drawing"/></p>
+
+<h3>B- Grafiksel Arayüzlü Kurulum</h3>
+
+<p>Masaüstündeki kurulum uygulaması ile grafiksel arayüz kullanılarak ta kurulabilir. 
+Uyguamadaki adımlarda gerekli bilgiler mevcuttur.</p>
+
+<h3>C- Klasik Kurulum</h3>
+
+<p>Adım adım aşağıdaki yönergelerini uygulanır.</p>
+
+<p>1- <strong>Sabit sürücülerin hazırlanması</strong></p>
+
+<p>Bu aşamda diskinizdeki veriler silinecektir! Kullanılan programlar hakkında yeterli
+bilginiz yoksa devam etmeniz kesinlikle önerilmez! Bu aşamaya geçmeden önce lütfen
+fdisk ve cfdisk programları ile ilgili <a href="http://belgeler.org/howto/partition-howto-fdisk.html">belgeleri</a> inceleyin. 
+Sistemi kuracağınız bölümleri hazırlamak için fdisk veya cfdisk komutlarını kullanbilirsiniz.
+Bu belgede sistem bir tane kök dizini üzerine kurulacağından, sabit disk üzerinde sadece bir 
+bölüm oluşturulacaktır. Bunu yapmak için,</p>
+
+<p>Sistemin kurulacağı sürücü belirlenir:</p>
+
+<pre><code>
+</code></pre>
+
+<p>fdisk (veya cfdisk) programı belirtilen sürücü ile başlatılır:</p>
+
+<pre><code>    fdisk /dev/sdx
+
+</code></pre>
+
+<p>'n' komutu ile sürücüde yeni bir bölüm oluşturulur:</p>
+
+<pre><code>    Komut (yardım için m): n
+</code></pre>
+
+<p>Bölümün tipi 'primary' veya 'extended' olarak belirlenir. Varsayılan
+ayar ile devam etmek için parametresiz girdi verilir:</p>
+
+<pre><code>    Partition type
+       p   primary (0 primary, 0 extended, 4 free)
+       e   extended (container for logical partitions)
+    Select (default p): 
+    Using default response p.
+</code></pre>
+
+<p>Disk bölüm numarası belirlenir, bu durumda da varsayılan ile ilerlemek yeterli
+olacaktır:</p>
+
+<pre><code>    Disk bölümü numarası (1-4, default 1):
+</code></pre>
+
+<p>Bölümün başlangıç sektörü belirlenir, bu aşamada varsayılan kullanılabilecek ilk sektörden
+başlar. Varsayılan ile devam edilir:</p>
+
+<pre><code>    First sector (2048-15730687, default 2048): 
+</code></pre>
+
+<p>Bölümün bitiş sektörü belirlenir. Burada direkt olarak numara kullanmak yerine başlangıç
+sektörüne belirli bir alan büyüklüğünün eklenmesi ile hesaplamak genel olarak daha 
+uygundur. Sadece kullanmak istediğiniz büyüklüğü belirtilen şekilde girin, örneğin 20 GB'lık
+bir alan kullanacaksanız parametreniz +20G olacaktır. Varsayılan olarak girilmesi halinde 
+program kullanılabilir tüm alanı ayıracaktır:</p>
+
+<pre><code>    Last sector, +sectors or +size{K,M,G,T,P} (2048-15730687, default 15730687): 
+</code></pre>
+
+<p>'w' komutu ile sürücüdeki değişiklikler kaydedilir:</p>
+
+<pre><code>    Komut (yardım için m): w
+    The partition table has been altered.
+    Calling ioctl() to re-read partition table.
+    Syncing disks.
+</code></pre>
+
+<p>2- <strong>Dosya sisteminin oluşturulması</strong></p>
+
+<p>Formatlan bölümün kullanılabilmesi için bölümde linux dosya sistemi oluşturulur:</p>
+
+<pre><code>    mkfs.ext4 /dev/sdax
+</code></pre>
+
+<p>3- <strong>Dosya sisteminin bağlanması</strong></p>
+
+<p>Kuruluma hazırlanan bölüm host sisteme bağlanır:</p>
+
+<pre><code>    mount /dev/sdax /mnt
+</code></pre>
+
+<p>4- <strong>Sistemin Kopyalanması</strong> </p>
+
+<p>Host sistemdeki mevcut dosya sistemi hedefe kopyalanır:</p>
+
+<pre><code>    cp -axvu / /mnt
+</code></pre>
+
+<p>5- <strong>initramfs (başlatıcı) oluşturulur:</strong></p>
+
+<pre><code>    mount --bind /dev /mnt/dev
+    mount --bind /sys /mnt/sys
+    mount --bind /proc /mnt/proc
+    chroot /mnt dracut -N --force --xz --omit systemd /boot/initrd
+</code></pre>
+
+<p>6- <strong>Gerekli grub ayarlarını yapılır:</strong></p>
+
+<pre><code>    grub-install --force --boot-directory=/mnt/boot /dev/sdy
+    chroot /mnt grub-mkconfig -o /boot/grub/grub.cfg
+</code></pre>
+
+</main>
+
+<footer>
+<section>
+
+<p>
+    <p>&copy; Milis Linux 2021 </p>
+    <p>Bu site Akdeniz Üniversitesi sunucularında barındırılmaktadır. Sitede yer alan içerik kaynak göstermek şartıyla kullanılabilir.
+	Linux® Linus Torvalds'ın tescilli bir markasıdır. (<a href="http://www.linuxfoundation.org/programs/legal/trademark/attribution">info</a>)
+	</p>
+	<p><a href="/en/">English Site</a></p>
+</p>
+</section>
+</footer>
+
+</body>
+</html>
