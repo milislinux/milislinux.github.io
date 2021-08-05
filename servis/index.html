@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }} - Milis Linux</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body id="servis">
+
+<nav>
+<section>
+    <span class="home">
+        <a href="/">Ana Sayfa</a>
+    </span>
+    <span class="links">
+        <a href="/indir/">İndir</a>
+        <a href="/belge/">Belge</a>
+        <a href="https://mls.akdeniz.edu.tr/git/milislinux/milis21">Kod</a>
+        <a href="https://mls.akdeniz.edu.tr/forum/forum">Forum</a>
+        <a href="/blog/">Blog</a>
+        <!-- <a href="/paketler21/">Paketler</a> -->
+        <a href="/hakkinda/">Hakkında</a>
+        <a href="/iletisim/">İletişim</a>
+    </span>
+</section>
+</nav>
+
+<main>
+<h3>Servis Yönetimi</h3>
+
+<p>Milis Linux başlatıcı(init) sistemi olarak 2.1 sürümünden itibaren Militer adlı kendi init sistemini kullanmaktadır.
+Militer başlatıcı sistemi, <em>init</em> ikili dosyasını Busybox'tan kullanmak üzere geri kalan işlemler için Lua sözdizimli dosyaları kullanmaktadır.
+Init ikilisi <em>/etc/inittab</em> dosyasında tanımlanmış olan <em>/etc/init/init.lua</em> betiğini sistem başlarken ve kapatılırken çalıştırır.
+Sistem ve uygulamalar ile ilgili bütün servisler init.lua tarafından yönetilmektedir.
+Servisler belli bir sırayla başlamaktadır. Servis sıralaması ve çalışma seviyeleri (runlevels) <em>/etc/init/config.lua</em> içinden ayarlanmaktadır.</p>
+
+<p>Servisler, sistem açılırken bir kereye mahsus veya devamlı çalışması gereken uygulamaların görev dosyalarını ifade eder.
+Bir servis dosyası genel olarak bir uygulama için çalışma, durma, oto-başlama ve devre dışı olma durumlarına dönük işlevleri sunmaktadır.
+Uygulamalar için servis dosyaları paket içeriği ile gelmeyip betik deposuyla beraber gelmektedir. 
+Servis dosyaları <em>/usr/milis/ayarlar/init/</em> altında yer almakta olup servis betiği ile <em>/etc/init</em> altına kopyalanarak kurulmaktadır.
+Bir uygulamanın sistem açılırken çalışması gerekiyorsa ilgili servis dosyası kurularak - etkinleştirilmelidir.
+Kullanıcı tanımlı servisler de oluşturulduktan sonra <em>/etc/init</em> altına kopyalanarak kullanılabilir.</p>
+
+<p>Milis Linux 2.1'de servis yönetimi, Lua dilinde yazılmış 
+<a href="https://mls.akdeniz.edu.tr/git/milislinux/milis21/src/branch/master/bin/servis.lua">servis.lua</a> betiğiyle sağlanmaktadır.
+Aşağıda <strong>servis</strong> komutunun uçbirimde alt komutları incelenmektedir. </p>
+
+<ul>
+<li>Servisi sisteme kurar. Kurulacak servis <em>/usr/milis/ayarlar/init/</em> altında yer almalıdır.</li>
+</ul>
+
+<pre><code>    servis ekle @servis
+</code></pre>
+
+<ul>
+<li>Servisin durum bilgisini verir.</li>
+</ul>
+
+<pre><code>    servis bil @servis
+</code></pre>
+
+<ul>
+<li>Servisi başlatır. </li>
+</ul>
+
+<pre><code>    servis kos @servis 
+</code></pre>
+
+<ul>
+<li>Servisi durdurur.</li>
+</ul>
+
+<pre><code>    servis dur @servis
+</code></pre>
+
+<ul>
+<li>Servisi yeniden başlatır.</li>
+</ul>
+
+<pre><code>    servis dur @servis &amp;&amp; servis kos @servis
+</code></pre>
+
+<ul>
+<li>Servisi etkilenleştirerek sistem açılırken oto-başlaması sağlanır.</li>
+</ul>
+
+<pre><code>    servis aktif @servis
+</code></pre>
+
+<ul>
+<li>Servisi devre dışı bırakarak sistem açılırken oto-başlaması iptal edilir. </li>
+</ul>
+
+<pre><code>    servis pasif @servis
+</code></pre>
+
+<ul>
+<li>Servisi kaldırır.</li>
+</ul>
+
+<pre><code>    servis sil @servis
+</code></pre>
+
+<ul>
+<li>Betik deposuyla gelen servis listesini verir.</li>
+</ul>
+
+<pre><code>    servis dliste @servis
+</code></pre>
+
+<ul>
+<li>Sistemde kurulu servis listesini verir.</li>
+</ul>
+
+<pre><code>    servis eliste @servis
+</code></pre>
+
+<ul>
+<li>Sistemdeki aktif(açılışta başlayan) servis listesini verir.</li>
+</ul>
+
+<pre><code>    servis liste @servis
+</code></pre>
+
+</main>
+
+<footer>
+<section>
+
+<p>
+    <p>&copy; Milis Linux 2021 </p>
+    <p>Bu site Akdeniz Üniversitesi sunucularında barındırılmaktadır. Sitede yer alan içerik kaynak göstermek şartıyla kullanılabilir.
+	Linux® Linus Torvalds'ın tescilli bir markasıdır. (<a href="http://www.linuxfoundation.org/programs/legal/trademark/attribution">info</a>)
+	</p>
+	<p><a href="/en/">English Site</a></p>
+</p>
+</section>
+</footer>
+
+</body>
+</html>
