@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sistem Testleri - Milis Linux</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+
+<body id="sistem_test">
+
+<nav>
+<section>
+    <span class="home">
+        <a href="/">Ana Sayfa</a>
+    </span>
+    <span class="links">
+        <a href="/indir/">İndir</a>
+        <a href="/belge/">Belge</a>
+        <a href="https://mls.akdeniz.edu.tr/git/milislinux/milis21">Kod</a>
+        <a href="https://mls.akdeniz.edu.tr/forum/forum">Forum</a>
+        <a href="/blog/">Blog</a>
+        <!-- <a href="/paketler21/">Paketler</a> -->
+        <a href="/hakkinda/">Hakkında</a>
+        <a href="/iletisim/">İletişim</a>
+    </span>
+</section>
+</nav>
+
+<main>
+<h3>Sistem Test Maddeleri</h3>
+
+<p>Milis Linux çalışan ve kurulu sistem testi aşağıdaki maddelere göre yapılmaktadır. </p>
+
+<ol>
+<li><p><strong>Donanım</strong></p>
+
+<ul>
+<li>Ağ
+<ul>
+<li>Kablolu bağlantı sağlayabilme
+<ul>
+<li>Dinamik ve statik IP adres temini</li>
+</ul></li>
+<li>Kablosuz bağlantı sağlayabilme
+<ul>
+<li>Dinamik ve statik IP adres temini</li>
+</ul></li>
+<li>Sürücü desteklememe
+<ul>
+<li>Hangi sürücü ve kernel modülü gerekli (istenilen bilgi)</li>
+</ul></li>
+<li>Minimal sürümde konsoldan bağlantı sorunu
+<ul>
+<li>Arayüz</li>
+<li>Connman komut arayüzü           </li>
+</ul></li>
+</ul></li>
+<li><p>Ekran</p>
+
+<ul>
+<li>Grafik arayüzü açılması/yırtılma vs (fiziksel, sanal makine) video sürücüsü bilgisi</li>
+</ul></li>
+<li><p>Ses</p>
+
+<ul>
+<li>Farklı ses formatlarının çalınabilmesi
+<ul>
+<li>mpg123 ile mp3</li>
+</ul></li>
+<li>Tarayıcı üzerinden ses alabilme</li>
+<li>Medya oynatıcısı ile ses alabilme</li>
+<li>Farklı ses giriş/çıkışların tanıması</li>
+</ul></li>
+<li><p>Bluetooth</p>
+
+<ul>
+<li>Bir bluettoh aygıtına bağlanabilme</li>
+<li>Servis başlatabilme</li>
+<li>Kulaklık ile ses alabilme</li>
+</ul></li>
+<li><p>Yazıcı</p>
+
+<ul>
+<li>Yazıcı tanıma ve erişebilme</li>
+<li>Test çıktısı alma</li>
+<li>Sorunlu yazıcı modeli, destek durumu</li>
+</ul></li>
+<li><p>Klavye</p>
+
+<ul>
+<li>Klavyenin yerleşiminin tanınması ve yerel ayarla başlaması</li>
+<li>Numlock aktif olması</li>
+</ul></li>
+<li><p>Gösterge</p>
+
+<ul>
+<li>RAM ve CPU tüketim değerleri</li>
+<li>Sıcaklık sensör çıktısı</li>
+</ul></li>
+</ul></li>
+<li><p><strong>Dosya Sistemi</strong></p>
+
+<ul>
+<li>Yanlış isimlendirilen dosya/dizin</li>
+<li>Boş dosya/dizin</li>
+<li>İzinleri arızalı olan dosya/dizin</li>
+<li>Yeniden başlatımda sıfırlanması gerekenler /tmp gibi dizinler</li>
+<li>Desteklenmesi gereken dosya sistemleri</li>
+<li>Bağlamasında(mount) sorunlu olan aygıtlar(usb, harici disk, telefon)</li>
+</ul></li>
+<li><p><strong>Servisler</strong></p>
+
+<ul>
+<li>Sistem açılırken hata veren veya çalışmayan servisler</li>
+</ul></li>
+<li><p><strong>Uygulamalar</strong></p>
+
+<ul>
+<li>Menuden açılmayan uygulama, konsoldan çalıştırılınca alınan hatalar</li>
+<li>Sorunlu uygulama, konsoldan çalıştırılınca alınan hatalar</li>
+<li>Uygulamaların bildirim iletimi (notify-send test)</li>
+<li>Uygulamaların kaynak tüketimi</li>
+</ul></li>
+<li><p><strong>Kapanış modları</strong></p>
+
+<ul>
+<li>Ekran kitleme, uyku, askıya alma, yebaşlat, kapatma modların çalışması</li>
+</ul></li>
+<li><p><strong>Yerelleştirme</strong></p>
+
+<ul>
+<li>Sistem dili</li>
+<li>Sistem saati</li>
+<li>Çeviri eksiklikleri</li>
+</ul></li>
+</ol>
+
+</main>
+
+<footer>
+<section>
+
+<p>
+    <p>&copy; Milis Linux 2021 </p>
+    <p>Bu site Akdeniz Üniversitesi sunucularında barındırılmaktadır. Sitede yer alan içerik kaynak göstermek şartıyla kullanılabilir.
+	Linux® Linus Torvalds'ın tescilli bir markasıdır. (<a href="http://www.linuxfoundation.org/programs/legal/trademark/attribution">info</a>)
+	</p>
+	<p><a href="/en/">English Site</a></p>
+</p>
+</section>
+</footer>
+
+</body>
+</html>
